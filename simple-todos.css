@@ -1,7 +1,7 @@
 /* CSS declarations go here */
 body {
   font-family: sans-serif;
-  background-color: green;
+  background-color: brown;
   background-attachment: fixed;
 
   position: absolute;
@@ -20,12 +20,12 @@ body {
   max-width: 600px;
   margin: 0 auto;
   min-height: 100%;
-  background: red;
+  background: pink;
 }
 
 header {
   background: #d2edf4;
-  background-color: yellow;
+  background-color: green;
   padding: 20px 15px 15px 15px;
   position: relative;
 }
@@ -65,7 +65,7 @@ form {
 ul {
   margin: 0;
   padding: 0;
-  background: blue;
+  background: grey;
 }
 
 .delete {
@@ -97,8 +97,8 @@ li.checked .text {
 }
 
 li.private {
-  background: #eee;
-  border-color: #ddd;
+  background: #ccc;
+  border-color: #bbb;
 }
 
 header .hide-completed {
