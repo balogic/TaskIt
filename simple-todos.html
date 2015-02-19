@@ -1,0 +1,30 @@
+<head>
+  <title>MeteorIt</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>MeteorIt</h1>
+      <form class="new-task">
+    <input type="text" name="text" placeholder="Add tasks..." />
+  </form>
+    </header>
+
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+
+<template name="task">
+  <li class="{{#if checked}}checked{{/if}}">
+    <button class="delete">&times;</button>
+
+    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+
+    <span class="text">{{text}}</span>
+  </li>
+</template>
