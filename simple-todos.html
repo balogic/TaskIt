@@ -5,10 +5,20 @@
 <body>
   <div class="container">
     <header>
-      <h1>MeteorIt</h1>
-      <form class="new-task">
-    <input type="text" name="text" placeholder="Add tasks..." />
-  </form>
+      <h1>MeteorIt ({{incompleteCount}})</h1>
+
+      <label class="hide-completed">
+        <input type="checkbox" checked="{{hideCompleted}}" />
+        Hide Finished
+      </label>
+
+      {{> loginButtons}}
+
+      {{#if currentUser}}
+        <form class="new-task">
+          <input type="text" name="text" placeholder="+Add Tasks" />
+        </form>
+      {{/if}}
     </header>
 
     <ul>
@@ -25,6 +35,6 @@
 
     <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
 
-    <span class="text">{{text}}</span>
+    <span class="text"><strong>{{username}}</strong> - {{text}}</span>
   </li>
 </template>
